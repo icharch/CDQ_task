@@ -8,6 +8,7 @@ from openpyxl.styles import PatternFill
 from datetime import datetime
 import numpy as np
 from openpyxl.utils.dataframe import dataframe_to_rows
+import os
 
 # Reading data
 file_path = '/Users/irminacharchuta/CDQ/Task.xlsx'
@@ -15,6 +16,15 @@ df = pd.read_excel(file_path, sheet_name="Outliers Marked")
 
 # Columns to consider for outliers
 columns_of_interest = ['mileage', 'price', 'hp', 'year']
+
+# Create the 'output' directory if it doesn't exist
+output_dir = 'output'
+os.makedirs(output_dir, exist_ok=True)
+
+for i, column in enumerate(columns_of_interest):
+    fig_outliers = px.box(df, y=column, title=f'Box Plot for {column}', points="all")
+    outlier_image_path = os.path.join(output_dir, f"{column}_outliers.png")
+    fig_outliers.write_image(outlier_image_path)
 
 # Finding outliers
 def get_outliers(series):
@@ -63,7 +73,7 @@ outliers_sheet = wb.create_sheet("Outliers Plots")
 # Generating box plots for each column to visualize outliers
 for i, column in enumerate(columns_of_interest):
     fig_outliers = px.box(df, y=column, title=f'Box Plot for {column}', points="all")
-    outlier_image_path = f"/Users/irminacharchuta/CDQ/{column}_outliers.png"
+    outlier_image_path = os.path.join('output', f"{column}_outliers.png")
     fig_outliers.write_image(outlier_image_path)
     img_outliers = Image(outlier_image_path)
     # Positioning images in two columns
