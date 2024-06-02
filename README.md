@@ -7,6 +7,10 @@ The aim of the project is to analyse the provided data set to ensure data qualit
 2. Is there a shift in customer preference from petrol to electric vehicles after the Green Deal article? 
 3. Does the data show a preference for German car brands among customers?
 
+The project includes two .xlsx files:
+1. Task.xlsx: This file contains the input data on which the script will work. The data in Task.xlsx has been transformed into a table using Power Query, and empty rows have been removed.
+2. Task_output.xlsx: This file contains the output data obtained after running the script, along with conclusions drawn after executing the script.
+
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
