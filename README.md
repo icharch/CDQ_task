@@ -2,9 +2,9 @@
 # CDQ Recruitment task
 
 ## Project Description
-The data set provided should be analysed to ensure data quality by checking the completeness and correctness of the values in each column, highlighting outliers and proposing corrective actions. Once the data has been corrected, visualisations should be created to answer the following business questions: 
-1. What is the trend in the average age of cars over time? 
-2. Is there a shift in customer preference from petrol to electric vehicles following the Green Deal article? 
+The aim of the project is to analyse the provided data set to ensure data quality by checking the completeness and correctness of the values in each column, highlighting outliers and proposing corrective actions. Once the data has been corrected, visualisations should be created to answer the following business questions: 
+1. What is the trend in the average age of cars over time?
+2. Is there a shift in customer preference from petrol to electric vehicles after the Green Deal article? 
 3. Does the data show a preference for German car brands among customers?
 
 ## Table of Contents
